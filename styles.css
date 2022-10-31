@@ -1,0 +1,741 @@
+body{
+    margin:0;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items:  center;
+    counter-reset:game;
+
+}
+h1{
+    font-size: 28px;
+    color: #08605F;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.score{
+    position: absolute;
+    font-size: 18px;
+    color: #08605F;
+    font-weight: bold;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 15;
+    top:100px;
+    
+
+}
+
+input:checked{
+    counter-increment: game; 
+}
+
+.score::after{
+    content: counter(game);
+}
+
+
+
+.phone{
+
+    position: relative;
+    width: 300px;
+    height: 600px;
+    border: 8px solid black;
+    border-radius: 40px;
+    background: #CCEFFF;
+    box-shadow: 0 19px 38px rgba(0,0,0, 0.30) ;
+    overflow: hidden;
+    
+}
+
+.layer-1 {
+    position: absolute;
+    z-index: 1;
+    height: 450px;
+    width: 80px;
+    bottom: 0;
+    right: 60px;
+    animation-name: layer;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes layer {
+    0%{
+            bottom: 0 ;
+    }
+
+    25%{
+        bottom: -80px ;
+    }
+
+    100%{
+        bottom: 0 ;
+    }
+
+
+}
+
+input[type=checkbox]{
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 80px;
+    appearance: none;
+    z-index: 15;
+
+}
+
+.layer-2 {
+    position: absolute;
+    z-index: 2;
+    height: 450px;
+    width: 80px;
+    bottom: 0;
+    left: 60px;
+    animation-name: layer;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+.layer-3 {
+    position: absolute;
+    z-index: 3;
+    left:0;
+    right:0;
+    margin: 0 auto;
+    width: 220px;
+    height: 400px;
+    background: #C3795A;
+    bottom: 0;
+    border-radius: 20px;
+    box-shadow: 23px 10px 11px -3px rgba(0,0,0,0.1);
+}
+
+.layer-4 {
+    position: absolute;
+    z-index: 4;
+    height: 350px;
+    width: 80px;
+    bottom: 0;
+    left: 120px;
+    animation-name: layer;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.layer-5 {
+    position: absolute;
+    z-index: 5;
+    height: 350px;
+    width: 80px;
+    bottom: 0;
+    left: 20px;
+    animation-name: layer;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+.layer-6 {
+    position: absolute;
+    z-index: 6;
+    left:0;
+    right:0;
+    width: 220px;
+    height: 300px;
+    background: #c3795a;
+    bottom: 0;
+    border-radius: 20px;
+    box-shadow: 23px 10px 11px -3px rgba(0,0,0,0.1);
+}
+
+.layer-7 {
+    position: absolute;
+    z-index: 7;
+    height: 240px;
+    width: 80px;
+    bottom: 0;
+    right: 35px;
+    animation-name: layer;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.layer-8 {
+    position: absolute;
+    z-index: 8;
+    width: 160px;
+    height: 190px;
+    background: #C3795A;
+    bottom: 0;
+    right: 0;
+    border-radius: 20px 20px 0 0;
+    box-shadow: -23px 10px 11px -3px rgba(0,0,0,0.1);
+    
+    
+}
+
+.layer-9 {
+    position: absolute;
+    z-index: 9;
+    height: 110px;
+    width: 130px;   
+    bottom: 0;
+    left : 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.layer-10 {
+    position: absolute;
+    height: 80px;
+    width: 110px;
+    z-index: 10;
+    bottom: 0;
+    left : 0;
+  
+    
+    
+}
+
+.layer-11 {
+    position: absolute;
+    height: 80px;
+    width: 110px;
+    z-index: 10;
+    bottom: 0;
+    right : 0;
+    
+
+    
+}
+
+ .layer-1 .left-ear--outer{
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: 10px;
+
+}
+
+.layer-1 .left-ear--inner{
+    background: pink;
+    border-radius: 70%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    left: 15px;
+    top:8px
+
+}
+.layer-1 .right-ear--outer{
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: 45px;
+
+}
+
+.layer-1 .right-ear--inner{
+    background: pink;
+    border-radius: 70%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    left: 50px;
+    top:8px
+
+}
+
+.layer-1 .head {
+
+    background: white;
+    border-radius: 50%;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+
+}
+
+
+
+.layer-1 .head__eye{
+    width: 4px;
+    height: 4px;
+    background: gray;
+    position: absolute;
+    border-radius: 50%;
+    top:15px;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes blink {
+    0%{
+            height: 4px;
+
+    }
+
+    5%{
+            height: 1px;
+            transform: translate(0px ,2px);
+    }
+
+    10%{
+            height: 4px;
+            transform: translate(0px ,0px);
+    }
+    
+}
+
+.layer-1 .head__eye--left{
+   left: 30px;
+    
+}
+.layer-1 .head__eye--right{
+    left: 40px;
+     
+ }
+
+ 
+
+ .layer-2 .left-ear--outer{
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: 10px;
+
+}
+
+.layer-2 .left-ear--inner{
+    background: pink;
+    border-radius: 70%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    left: 15px;
+    top:8px
+
+}
+.layer-2 .right-ear--outer{
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: 45px;
+
+}
+
+.layer-2 .right-ear--inner{
+    background: pink;
+    border-radius: 70%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    left: 50px;
+    top:8px
+
+}
+
+.layer-2 .head {
+
+    background: white;
+    border-radius: 50%;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+}
+
+.layer-2 .head__eye{
+    width: 4px;
+    height: 4px;
+    background: gray;
+    position: absolute;
+    border-radius: 50%;
+    top:15px;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    
+}
+
+.layer-2 .head__eye--left{
+   left: 30px;
+    
+}
+.layer-2 .head__eye--right{
+    left: 40px;
+     
+ }
+
+
+
+
+ .layer-4 .left-ear--outer{
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: 10px;
+
+}
+
+.layer-4 .left-ear--inner{
+    background: pink;
+    border-radius: 70%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    left: 15px;
+    top:8px
+
+}
+.layer-4 .right-ear--outer{
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: 45px;
+
+}
+
+.layer-4 .right-ear--inner{
+    background: pink;
+    border-radius: 70%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    left: 50px;
+    top:8px
+
+}
+
+.layer-4 .head {
+
+    background: white;
+    border-radius: 50%;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+}
+
+.layer-4 .head__eye{
+    width: 4px;
+    height: 4px;
+    background: gray;
+    position: absolute;
+    border-radius: 50%;
+    top:15px;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+
+.layer-4 .head__eye--left{
+   left: 30px;
+    
+}
+.layer-4 .head__eye--right{
+    left: 40px;
+     
+ }
+
+ 
+
+ .layer-5 .left-ear--outer{
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: 10px;
+
+}
+
+.layer-5 .left-ear--inner{
+    background: pink;
+    border-radius: 70%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    left: 15px;
+    top:8px
+
+}
+.layer-5 .right-ear--outer{
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: 45px;
+
+}
+
+.layer-5 .right-ear--inner{
+    background: pink;
+    border-radius: 70%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    left: 50px;
+    top:8px
+
+}
+
+.layer-5 .head {
+
+    background: white;
+    border-radius: 50%;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+
+}
+
+.layer-5 .head__eye{
+    width: 4px;
+    height: 4px;
+    background: gray;
+    position: absolute;
+    border-radius: 50%;
+    top:15px;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.layer-5 .head__eye--left{
+   left: 30px;
+    
+}
+.layer-5 .head__eye--right{
+    left: 40px;
+     
+ }
+
+ 
+
+
+ .layer-7 .left-ear--outer{
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: 10px;
+
+}
+
+.layer-7 .left-ear--inner{
+    background: pink;
+    border-radius: 70%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    left: 15px;
+    top:8px
+
+}
+.layer-7 .right-ear--outer{
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: 45px;
+
+}
+
+.layer-7 .right-ear--inner{
+    background: pink;
+    border-radius: 70%;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    left: 50px;
+    top:8px
+
+}
+
+.layer-7 .head {
+
+    background: white;
+    border-radius: 50%;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+}
+
+.layer-7 .head__eye{
+    width: 4px;
+    height: 4px;
+    background: gray;
+    position: absolute;
+    border-radius: 50%;
+    top:15px;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    
+}
+
+.layer-7 .head__eye--left{
+   left: 30px;
+    
+}
+.layer-7 .head__eye--right{
+    left: 40px;
+     
+ }
+
+ 
+ .zig-zag::after{
+
+    content: "";
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    height: 30px;
+    background: linear-gradient(135deg, #67A167 25%, transparent 25%) -50px 0,
+                linear-gradient(-135deg, #67A167 25%, transparent 25%) -50px 0,
+                linear-gradient(45deg, #67A167 25%, transparent 25%),
+                linear-gradient(-45deg, #67A167 25%, transparent 25%);
+    background-size: 30px 80px;
+    border-radius: 20px;
+
+ }
+
+ .zig-zag::before {
+    content: "";
+    position: absolute; 
+    border-radius: 6px 6px 0 0;
+    top: 12px;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(135deg, #a6543d 25%, transparent 25%) -50px 0,
+                linear-gradient(-135deg, #a6543d 25%, transparent 25%) -50px 0,
+                linear-gradient(45deg, #a6543d 25%, transparent 25%),
+                linear-gradient(-45deg, #a6543d 25%, transparent 25%);
+    background-size: 30px 80px;
+    
+}
+
+
+.layer-9::before{
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 70%;
+    bottom: 0;
+    left: 0;
+    background: #67A167 ;
+    border-radius: 100px 100px 10px 20px;
+}
+.layer-9::after{
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 70%;
+    bottom: 0;
+    right: 0;
+    background: #67A167 ;
+    border-radius: 100px 100px 10px 20px;
+}
+
+.grass{
+    position: absolute;
+    width: 40%;
+    height: 90%;
+    bottom: 0;
+    left: 30%;
+    background: #67A167;
+    border-radius: 100px 100px 10px 20px;
+}
+
+.layer-10::before{
+    position: absolute;
+    content: "";
+    width: 75%;
+    height: 100%;
+    background: white;
+    border-radius: 100px 100px 10px 20px;
+}
+.layer-10::after{
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 60%;
+    bottom: 0;
+    right: 0;
+    background: white;
+    border-radius: 100px;
+}
+
+.layer-11::before{
+    position: absolute;
+    content: "";
+    width: 75%;
+    height: 100%;
+    right: 0;
+    background: white;
+    border-radius: 100px 100px 30px 20px;
+}
+.layer-11::after{
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 60%;
+    bottom: 0;
+    left: 0;
+    background: white;
+    border-radius: 100px;
+}
